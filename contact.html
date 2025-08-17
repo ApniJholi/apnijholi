@@ -4,34 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - ApniJholi</title>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {margin:0; font-family: Arial, sans-serif; background:#f9f9f9; color:#333;}
+    header {background:#8b0000; color:white; padding:15px 20px; text-align:center;}
+    nav {background:#333; padding:10px; text-align:center;}
+    nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
+    nav a:hover {color:#ffcc00;}
+    .container {padding:20px; max-width:600px; margin:auto;}
+    form {background:white; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    label {display:block; margin:10px 0 5px; font-weight:bold;}
+    input, textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;}
+    button {margin-top:15px; background:#8b0000; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;}
+    button:hover {background:#b30000;}
+    footer {background:#333; color:white; text-align:center; padding:15px; margin-top:30px;}
+  </style>
 </head>
 <body>
   <header>
-    <h1>👜 ApniJholi</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="clothes.html">Clothes</a>
-      <a href="contact.html">Contact</a>
-      <a href="legal.html">Legal</a>
-    </nav>
+    <h1>Contact Us</h1>
   </header>
 
-  <main>
-    <h2>Contact Us</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="clothes.html">Clothes</a>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Legal</a>
+  </nav>
+
+  <div class="container">
+    <h2>We'd love to hear from you!</h2>
     <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="4"></textarea><br>
-      <button type="submit">Send</button>
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Message</label>
+      <textarea rows="5" placeholder="Write your message"></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
-  </main>
+  </div>
 
   <footer>
-    <p>© 2025 ApniJholi. All Rights Reserved.</p>
+    <p>&copy; 2025 ApniJholi. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
