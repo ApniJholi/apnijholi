@@ -1,87 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ApniJholi - Tradition with Style</title>
-  <meta name="google-site-verification" content="XXXXXXX" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apni Jholi – Best Deals, Smart Picks</title>
+  <meta name="description" content="Apni Jholi: handpicked deals, reviews and affiliate recommendations. Transparent, ad‑light, and mobile‑first." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000000' d='M56 88h144l-14 120H70z'/%3E%3Cpath fill='%23000000' d='M96 80a32 32 0 1 1 64 0h-16a16 16 0 1 0-32 0z'/%3E%3C/svg%3E" />
+  <meta property="og:title" content="Apni Jholi – Best Deals, Smart Picks" />
+  <meta property="og:description" content="Handpicked products with honest notes. Click, compare, and save." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-DOMAIN.example" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=80&auto=format&fit=crop" />
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Apni Jholi",
+    "url":"https://YOUR-DOMAIN.example",
+    "logo":"https://YOUR-DOMAIN.example/logo.png",
+    "sameAs":["https://www.youtube.com/@FactsTrach"]
+  }</script>
   <style>
-    body {margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#fafafa; color:#333;}
-    header {display:flex; justify-content:space-between; align-items:center; background:#8b0000; padding:15px 30px; color:white;}
-    header h1 {margin:0; font-size:26px;}
-    header nav a {color:white; text-decoration:none; margin:0 15px; font-weight:500; transition:0.3s;}
-    header nav a:hover {color:#ffcc00;}
-
-    .banner {background:url('https://images.unsplash.com/photo-1520975918318-3f6c63c1a3b9') no-repeat center/cover; 
-             height:300px; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; color:white;}
-    .banner::after {content:""; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5);}
-    .banner h2 {position:relative; font-size:36px; font-weight:bold; z-index:2;}
-
-    .container {padding:40px 20px; max-width:1200px; margin:auto;}
-    .container h2 {text-align:center; font-size:28px; margin-bottom:20px;}
-
-    .products {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:20px;}
-    .card {background:white; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15); overflow:hidden; transition:0.3s;}
-    .card img {width:100%; height:250px; object-fit:cover;}
-    .card h3 {margin:12px; font-size:18px;}
-    .card p {margin:0 12px 15px; color:#8b0000; font-weight:bold;}
-    .card:hover {transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
-
-    .about {background:#fff; padding:50px 20px; margin-top:40px; text-align:center;}
-    .about h2 {font-size:26px; margin-bottom:15px;}
-    .about p {max-width:800px; margin:auto; font-size:16px; line-height:1.6; color:#555;}
-
-    footer {background:#333; color:white; text-align:center; padding:20px; margin-top:40px;}
+    :root{
+      --bg:#0b0f14; --card:#111823; --muted:#9fb0c3; --text:#e8f0f7; --brand:#69e6a6; --brand-2:#7aa8ff; --accent:#ffe083;
+      --ring: 0 0 0 3px rgba(105,230,166,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:linear-gradient(180deg,#0b0f14,#081018 40%,#0b0f14 100%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,ubuntu,"Noto Sans",sans-serif}
+    a{color:var(--brand)}
+    header{position:sticky;top:0;z-index:40;background:rgba(8,16,24,.7);backdrop-filter:blur(8px);border-bottom:1px solid #152234}
+    .wrap{max-width:1100px;margin:auto;padding:14px 16px}
+    .nav{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text)}
+    .logo svg{width:28px;height:28px}
+    .tag{font-size:12px;color:var(--muted)}
+    .btn{appearance:none;border:1px solid #203146;background:#142033;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer}
+    .btn:hover{border-color:#2b476e;box-shadow:var(--ring)}
+    .hero{padding:48px 16px 22px}
+    .hero h1{font-size:clamp(28px,4.5vw,46px);margin:0 0 10px}
+    .hero p{margin:0;color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    @media(min-width:640px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+    .card{background:linear-gradient(180deg,#0f1724,#0e1622);border:1px solid #1a2942;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#0b1320}
+    .pad{padding:14px}
+    .price{font-weight:700}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid #28476f;background:#132136;color:var(--text);font-size:12px}
+    .muted{color:var(--muted)}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+    .input{flex:1;min-width:220px;padding:10px 12px;border-radius:10px;border:1px solid #223652;background:#0d1826;color:var(--text)}
+    select{padding:10px 12px;border-radius:10px;border:1px solid #223652;background:#0d1826;color:var(--text)}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .footer{margin:40px 0 80px;color:var(--muted);font-size:14px}
+    .section{padding:18px 16px}
+    .section h2{margin:0 0 8px;font-size:clamp(20px,3vw,28px)}
+    .notice{background:#0e1a29;border:1px dashed #28476f;border-radius:12px;padding:12px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
   </style>
 </head>
 <body>
   <header>
-    <h1>ApniJholi</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="clothes.html">Clothes</a>
-      <a href="contact.html">Contact</a>
-      <a href="legal.html">Legal</a>
-    </nav>
+    <div class="wrap nav">
+      <a class="logo" href="#home" aria-label="Apni Jholi home">
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M56 88h144l-14 120H70z"/><path fill="currentColor" d="M96 80a32 32 0 1 1 64 0h-16a16 16 0 1 0-32 0z"/></svg>
+        <strong>Apni Jholi</strong>
+      </a>
+      <nav class="badges" aria-label="Primary">
+        <a class="pill" href="#deals">🔥 Today Deals</a>
+        <a class="pill" href="#reviews">📝 Reviews</a>
+        <a class="pill" href="#disclosure">ℹ️ Disclosure</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="banner">
-    <h2>Discover Fashion with Tradition</h2>
-  </div>
+  <main id="home" class="wrap">
+    <section class="hero">
+      <h1>Best Deals, Smart Picks – <span style="color:var(--brand)">No Tech Jargon</span></h1>
+      <p>Neeche diye gaye products par click karke aap direct seller site par jayenge. Prices change ho sakte hain. Hum kuch links par commission kama sakte hain, bina aapke extra kharch ke.</p>
+      <div class="toolbar" role="search">
+        <label for="q" class="sr-only">Search products</label>
+        <input id="q" class="input" placeholder="Search – e.g., earphones, tripod, mixer…" />
+        <select id="category">
+          <option value="">All Categories</option>
+          <option>Electronics</option>
+          <option>Kitchen</option>
+          <option>Fitness</option>
+          <option>Books</option>
+        </select>
+        <select id="sort">
+          <option value="pop">Sort: Popular</option>
+          <option value="lh">Price: Low → High</option>
+          <option value="hl">Price: High → Low</option>
+          <option value="new">Newest</option>
+        </select>
+        <button class="btn" id="clear">Reset</button>
+      </div>
+    </section>
 
-  <div class="container">
-    <h2>Featured Products</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975698519-59c0d7f8b6e0" alt="Kurta">
-        <h3>Men's Kurta</h3>
-        <p>₹199</p>
+    <section id="deals" class="section">
+      <h2>Featured Picks</h2>
+      <div id="products" class="grid cols-3" aria-live="polite"></div>
+    </section>
+
+    <section id="reviews" class="section">
+      <h2>Mini Reviews</h2>
+      <div class="grid cols-3" id="reviewsWrap"></div>
+    </section>
+
+    <section id="disclosure" class="section">
+      <h2>Affiliate Disclosure</h2>
+      <div class="notice">
+        <p>Some links on this site are affiliate links. If you purchase through them, we may earn a small commission. This helps us keep content free. <strong>You pay the same price.</strong></p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1583744946564-b43da62b4d79" alt="Saree">
-        <h3>Silk Saree</h3>
-        <p>₹499</p>
+    </section>
+
+    <footer class="footer">
+      <div class="badges">
+        <span class="pill">🇮🇳 Made for India</span>
+        <span class="pill">⚡ Fast & Lite</span>
+        <span class="pill">🔒 Safe Links</span>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716a" alt="Sherwani">
-        <h3>Trousers</h3>
-        <p>₹250</p>
-      </div>
+      <p class="muted">© <span id="yr"></span> Apni Jholi • <a href="#privacy">Privacy</a> • <a href="#terms">Terms</a></p>
+    </footer>
+  </main>
+
+  <!-- Minimal inline templates for extra pages -->
+  <template id="privacy">
+    <div class="section">
+      <h2>Privacy Policy</h2>
+      <p>We do not collect personal data directly. External sellers may have their own policies. Analytics (if enabled) will be privacy‑friendly.</p>
     </div>
-  </div>
+  </template>
+  <template id="terms">
+    <div class="section">
+      <h2>Terms</h2>
+      <p>All product names, logos, and brands are property of their respective owners. Prices & availability change without notice.</p>
+    </div>
+  </template>
 
-  <div class="about">
-    <h2>About ApniJholi</h2>
-    <p>
-      At ApniJholi, we bring you the perfect blend of tradition and modern style. 
-      Our handpicked collection of ethnic wear celebrates the rich heritage of India while keeping you fashion-forward. 
-      From elegant sarees to stylish kurtas, we ensure premium quality at affordable prices. 
-      Your style, our tradition — ApniJholi.
-    </p>
-  </div>
+  <script>
+    // ====== CONFIG (edit these) ======
+    const AFFILIATE_TAG = "apnijholi-21"; // e.g., Amazon tag or your parameter
+    const UTM = "utm_source=apnijholi&utm_medium=affiliate&utm_campaign=site";
 
-  <footer>
-    <p>&copy; 2025 ApniJholi. All Rights Reserved.</p>
-  </footer>
+    // Example catalog — replace with your products. Keep fields same.
+    const CATALOG = [
+      {
+        id:"e1", title:"Wireless Earbuds (BT 5.3)", category:"Electronics", price:1299, mrp:2499,
+        rating:4.4, reviews:12000, badge:"#1 Value", img:"https://images.unsplash.com/photo-1585386959984-a41552231658?w=900&q=80&auto=format&fit=crop",
+        aff:"https://www.amazon.in/dp/B0BXYZ1234", notes:"Balanced sound, type‑C fast charge, IPX5. Solid mic for calls.", added:"2025-08-05"
+      },
+      {
+        id:"k1", title:"Mixer Grinder 750W", category:"Kitchen", price:2799, mrp:4999, rating:4.3, reviews:5400, badge:"Editor’s pick",
+        img:"https://images.unsplash.com/photo-1586201375754-1421e0aa2fba?w=900&q=80&auto=format&fit=crop", aff:"https://www.flipkart.com/itm/ABC123",
+        notes:"Sturdy jars, overload protector, 2‑yr warranty.", added:"2025-07-30"
+      },
+      {
+        id:"f1", title:"Adjustable Dumbbell (10kg)", category:"Fitness", price:1699, mrp:2499, rating:4.2, reviews:2100, badge:"Budget fit",
+        img:"https://images.unsplash.com/photo-1517963879433-6ad34aa94b05?w=900&q=80&auto=format&fit=crop", aff:"https://www.amazon.in/dp/B09FIT1234",
+        notes:"Rubber plates, secure locks, home workout friendly.", added:"2025-08-10"
+      },
+      {
+        id:"e2", title:"Phone Tripod with Remote", category:"Electronics", price:899, mrp:1499, rating:4.1, reviews:9800, badge:"Creator’s tool",
+        img:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=80&auto=format&fit=crop", aff:"https://www.amazon.in/dp/B08TRI1234",
+        notes:"Reels/shorts ke liye perfect; remote shutter.", added:"2025-07-12"
+      },
+      {
+        id:"b1", title:"Atomic Habits (Hindi)", category:"Books", price:349, mrp:599, rating:4.7, reviews:105000, badge:"Bestseller",
+        img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&q=80&auto=format&fit=crop", aff:"https://www.amazon.in/dp/1847941834",
+        notes:"Chhoti aadatein, bada asar – student must‑read.", added:"2025-06-01"
+      },
+      {
+        id:"k2", title:"Steel Bottle 1L (Insulated)", category:"Kitchen", price:699, mrp:1299, rating:4.5, reviews:3200, badge:"Leak‑proof",
+        img:"https://images.unsplash.com/photo-1541643600914-78b084683601?w=900&q=80&auto=format&fit=crop", aff:"https://www.flipkart.com/itm/DEF456",
+        notes:"Keeps water cool ~18h, sweat‑free body.", added:"2025-08-15"
+      }
+    ];
+
+    // ====== UTIL ======
+    const byPop = (a,b)=> (b.reviews*b.rating) - (a.reviews*a.rating);
+    const byLH = (a,b)=> a.price - b.price;
+    const byHL = (a,b)=> b.price - a.price;
+    const byNew = (a,b)=> new Date(b.added) - new Date(a.added);
+
+    function money(n){ return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n) }
+
+    function buildAff(url){
+      // Append affiliate + UTM safely
+      try{
+        const u = new URL(url);
+        if(AFFILIATE_TAG){
+          // for Amazon style tag
+          if(!u.searchParams.has('tag')) u.searchParams.set('tag', AFFILIATE_TAG);
+        }
+        if(UTM){
+          const params = new URLSearchParams(UTM);
+          for(const [k,v] of params.entries()) if(!u.searchParams.has(k)) u.searchParams.set(k,v);
+        }
+        u.searchParams.set('ref', 'apnijholi');
+        u.searchParams.set('linkCode','osi');
+        return u.toString();
+      }catch(e){
+        // Fallback for plain links
+        const glue = url.includes('?') ? '&' : '?';
+        return `${url}${glue}${UTM}`;
+      }
+    }
+
+    // ====== RENDER ======
+    const $q = document.getElementById('q');
+    const $cat = document.getElementById('category');
+    const $sort = document.getElementById('sort');
+    const $grid = document.getElementById('products');
+    const $clear = document.getElementById('clear');
+
+    function card(p){
+      const save = p.mrp && p.price ? Math.max(0, p.mrp - p.price) : 0;
+      const off = p.mrp ? Math.round((save / p.mrp) * 100) : 0;
+      return `
+        <article class="card" data-id="${p.id}" data-cat="${p.category}">
+          <img loading="lazy" src="${p.img}" alt="${p.title}">
+          <div class="pad">
+            <div class="badges" style="margin-bottom:8px">
+              ${p.badge?`<span class='pill'>${p.badge}</span>`:''}
+              <span class="pill">⭐ ${p.rating} (${p.reviews.toLocaleString()})</span>
+              ${off?`<span class="pill">⬇️ Save ${off}%</span>`:''}
+            </div>
+            <h3 style="margin:4px 0 6px;font-size:18px">${p.title}</h3>
+            <p class="muted" style="min-height:40px;margin:0 0 8px">${p.notes}</p>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <span class="price">${money(p.price)}</span>
+              ${p.mrp?`<s class="muted">${money(p.mrp)}</s>`:''}
+            </div>
+            <a class="btn" target="_blank" rel="sponsored noopener" href="${buildAff(p.aff)}" aria-label="Buy ${p.title}">View Deal</a>
+          </div>
+        </article>`
+    }
+
+    function render(list){
+      $grid.innerHTML = list.map(card).join('');
+    }
+
+    function filterSort(){
+      const q = ($q.value||'').toLowerCase().trim();
+      const c = $cat.value;
+      let list = CATALOG.filter(p=>
+        (!c || p.category===c) &&
+        (!q || (p.title+" "+p.notes).toLowerCase().includes(q))
+      );
+      const s = $sort.value;
+      if(s==='lh') list.sort(byLH);
+      else if(s==='hl') list.sort(byHL);
+      else if(s==='new') list.sort(byNew);
+      else list.sort(byPop);
+      render(list);
+    }
+
+    [$q,$cat,$sort].forEach(el=> el.addEventListener('input', filterSort));
+    $clear.addEventListener('click',()=>{ $q.value=''; $cat.value=''; $sort.value='pop'; filterSort() });
+
+    // Mini reviews (auto from catalog)
+    const $reviews = document.getElementById('reviewsWrap');
+    $reviews.innerHTML = CATALOG.slice(0,3).map(p=>`<article class='card'><div class='pad'><h3 style='margin:0 0 8px'>${p.title}</h3><p class='muted'>${p.notes}</p><a class='btn' target='_blank' rel='sponsored noopener' href='${buildAff(p.aff)}'>Read/Buy</a></div></article>`).join('');
+
+    // Init
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    filterSort();
+
+    // Simple router for #privacy / #terms templates
+    function route(){
+      const id = location.hash.replace('#','');
+      if(['privacy','terms'].includes(id)){
+        document.querySelector('main').innerHTML = document.getElementById(id).innerHTML + '<p class="section"><a class="pill" href="#home">← Back</a></p>'
+      }
+    }
+    window.addEventListener('hashchange', route);
+  </script>
 </body>
 </html>
+
